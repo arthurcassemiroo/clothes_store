@@ -14,3 +14,7 @@ I look forward to hearing from you soon and potentially collaborating on this pr
 
 Best regards,
 AI help"
+
+## Result after the development of the site:
+
+![GIF showing the result of the site](result_index.gif) ![GIF showing the result of the site](result_products.gif)
