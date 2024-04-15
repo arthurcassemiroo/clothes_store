@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panos dos manos</title>
+    <link rel="stylesheet" href="..\css\style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="..\imgs\icons\logo.svg" alt="Logo da Minha Loja de Roupas">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="..\ofertas.html">Ofertas</a></li>
+                <li><a href="..\lancamentos.html">Lançamentos</a></li>
+            </ul>
+        </nav>
+        <div id="pesquisa">
+            <input type="text" placeholder="Buscar...">
+            <button><img src="..\imgs\icons\procurar.svg" alt="Buscar"></button>
+        </div>
+        <div id="botoes">
+            <button><img src="..\imgs\icons\carrinho.svg" alt="Sacola"></button>
+            <button><img src="..\imgs\icons\coracao.svg" alt="Favoritos"></button>
+            <button><img src="..\imgs\icons\user.svg" alt="Usuário"></button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="banner-ofertas">
+            <div class="slider">
+                <div class="slide">
+                    <img src="..\imgs\destaques\destaque1.svg" alt="Imagem 1">
+                </div>
+                <div class="slide">
+                    <img src="..\imgs\destaques\destaque2.svg" alt="Imagem 2">
+                </div>
+                <div class="slide">
+                    <img src="..\imgs\destaques\destaque3.svg" alt="Imagem 3">
+                </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </section>
+
+        <h1 class="titulo-lancamentos">Lançamentos</h1>
+        <section class="lancamentos">
+            <button class="prev_itens" onclick="prevItem()">&#10094;</button>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="item-lancamento">
+                        <img src="..\imgs\produtos\lancamento1.svg" alt="Produto 1">
+                        <p>Lançamento 1</p>
+                        <p>Preço: $1</p>
+                    </div>
+                    <div class="item-lancamento">
+                        <img src="..\imgs\produtos\lancamento2.svg" alt="Produto 2">
+                        <p>Lançamento 2</p>
+                        <p>Preço: $2</p>
+                    </div>
+                    <div class="item-lancamento">
+                        <img src="..\imgs\produtos\lancamento3.svg" alt="Produto 3">
+                        <p>Lançamento 3</p>
+                        <p>Preço: $3</p>
+                    </div>
+                    <div class="item-lancamento">
+                        <img src="..\imgs\produtos\lancamento4.svg" alt="Produto 4">
+                        <p>Lançamento 4</p>
+                        <p>Preço: $4</p>
+                    </div>
+                    <div class="item-lancamento">
+                        <img src="..\imgs\produtos\lancamento5.svg" alt="Produto 5">
+                        <p>Lançamento 5</p>
+                        <p>Preço: $5</p>
+                    </div>
+                    <div class="item-lancamento">
+                        <img src="..\imgs\produtos\lancamento6.svg" alt="Produto 6">
+                        <p>Lançamento 6</p>
+                        <p>Preço: $6</p>
+                    </div>
+                    <div class="item-lancamento">
+                        <img src="..\imgs\produtos\lancamento7.svg" alt="Produto 7">
+                        <p>Lançamento 7</p>
+                        <p>Preço: $7</p>
+                    </div>
+                </div>
+            </div>
+            <button class="next_itens" onclick="nextItem()">&#10095;</button>
+        </section>
+
+        <section>
+            <div class="banners-de-destaque">
+                <div class="banner-destaque">
+                    <img src="..\imgs\destaques\box1.svg" alt="Descrição da Imagem 1">
+                </div>
+                <div class="banner-destaque">
+                    <img src="..\imgs\destaques\box2.svg" alt="Descrição da Imagem 2">
+                </div>
+                <div class="banner-destaque">
+                    <img src="..\imgs\destaques\box3.svg" alt="Descrição da Imagem 3">
+                </div>
+              </div>
+        </section>
+
+        <h1 class="titulo-vendidos">Mais vendidos</h1>
+        <section class="mais-vendidos">
+            <button class="prev_itens">&#10094;</button>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="item-vendidos">
+                        <img src="..\imgs\produtos\mais_vendidos1.svg" alt="Produto 1">
+                        <p>Tênis 1</p>
+                        <p>Preço: $1</p>
+                    </div>
+                    <div class="item-vendidos">
+                        <img src="..\imgs\produtos\mais_vendidos2.svg" alt="Produto 2">
+                        <p>Tênis 2</p>
+                        <p>Preço: $2</p>
+                    </div>
+                    <div class="item-vendidos">
+                        <img src="..\imgs\produtos\mais_vendidos3.svg" alt="Produto 3">
+                        <p>Tênis 3</p>
+                        <p>Preço: $3</p>
+                    </div>
+                    <div class="item-vendidos">
+                        <img src="..\imgs\produtos\mais_vendidos4.svg" alt="Produto 4">
+                        <p>Tênis 4</p>
+                        <p>Preço: $4</p>
+                    </div>
+                    <div class="item-vendidos">
+                        <img src="..\imgs\produtos\mais_vendidos5.svg" alt="Produto 5">
+                        <p>Tênis 5</p>
+                        <p>Preço: $5</p>
+                    </div>
+                    <div class="item-vendidos">
+                        <img src="..\imgs\produtos\mais_vendidos6.svg" alt="Produto 5">
+                        <p>Tênis 6</p>
+                        <p>Preço: $6</p>
+                    </div>
+                    <div class="item-vendidos">
+                        <img src="..\imgs\produtos\mais_vendidos7.svg" alt="Produto 5">
+                        <p>Tênis 7</p>
+                        <p>Preço: $7</p>
+                    </div>
+                </div>
+            </div>
+            <button class="next_itens">&#10095;</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Panos dos manos</p>
+    </footer>
+
+    <script src="..\js\app.js"></script>
+</body>
+</html>

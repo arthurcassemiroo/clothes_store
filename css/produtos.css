@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    color: orange;
+    padding: 1.5em; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+nav ul li {
+    margin-right: 4em; 
+    margin-left: 4em; 
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+#pesquisa {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    margin-right: -8em;
+}
+
+#pesquisa button img {
+    width: 1.5em; 
+    height: 1.5em; 
+    object-fit: contain; 
+}
+
+#pesquisa button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-left: -0.5em; 
+}
+
+#pesquisa input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    margin-right: 0.5em; 
+}
+
+#botoes button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5em; 
+}
+
+#botoes button:last-child {
+    margin-right: 0; 
+}
+
+#botoes button img {
+    width: 1.5em; 
+    height: 1.5em; 
+}
+
+
+.logo {
+    margin-left: 1.5em; 
+}
+
+
+.logo img {
+    max-height: 7em; 
+}
+
+
+
+main {
+    background-color: #fff; 
+    padding: 1.5em;
+}
+
+.bloco-texto {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.bloco-texto h1 {
+    font-size: 36px; 
+    margin: 0; 
+}
+
+.bloco-texto h2 {
+    font-size: 24px; 
+    margin: 0; 
+}
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.produto {
+    width: calc(33.33% - 1em); 
+    margin-bottom: 1em; 
+    border: 2px solid #808080; 
+    border-radius: 10px; 
+    padding: 1em; 
+    box-sizing: border-box; 
+    position: relative; 
+    transition: all 0.3s ease; /
+}
+
+.produto:hover {
+    transform: scale(1.05); 
+    border-color: orange; 
+}
+
+.produto img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 0.5em; 
+}
+
+.produto .produto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.produto h2 {
+    margin: 0; 
+    text-align: left; 
+}
+
+.favoritar-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+ 
+}
+
+.favoritar-btn img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.produto p, .produto span {
+    margin: 0.5em 0; 
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* Estilizamos o container dos filtros */
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Adicionamos borda com cantos arredondados para os filtros */
+.filter {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o texto "Selecione os tamanhos" */
+.selected-option {
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+/* Estilos para as opções de seleção */
+.options {
+    display: none;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.options.show {
+    display: block;
+}
+
+/* Estilizamos os botões de ordenação */
+.select-container {
+    position: relative;
+    z-index: 1; 
+}
+
+.select-container .selected-option::after {
+    content: "\25BC";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.select-container .options {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: calc(100% - 2px);
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2; 
+}
+
+.select-container .options.show {
+    display: block;
+}
+
+.price-inputs input[type="text"] {
+    width: 90px;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.price-inputs .dash {
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+}

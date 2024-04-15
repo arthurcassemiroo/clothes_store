@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panos dos manos</title>
+    <link rel="stylesheet" href="..\css\produtos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="..\imgs\icons\logo.svg" alt="Logo da Minha Loja de Roupas">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="..\index.html">Início</a></li>
+                <li><a href="..\lancamentos.html">Lançamentos</a></li>
+            </ul>
+        </nav>
+        <div id="pesquisa">
+            <input type="text" placeholder="Buscar...">
+            <button><img src="..\imgs\icons\procurar.svg" alt="Buscar"></button>
+        </div>
+        <div id="botoes">
+            <button><img src="..\imgs\icons\carrinho.svg" alt="Sacola"></button>
+            <button><img src="..\imgs\icons\coracao.svg" alt="Favoritos"></button>
+            <button><img src="..\imgs\icons\user.svg" alt="Usuário"></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="bloco-texto">
+            <h1>Ofertas</h1>
+            <br>
+            <h2>Toda semana, novos itens entram na aba de ofertas. Fique por dentro das novidades e não perca nenhuma promoção!</h2>
+        </div>
+
+        <div class="banner">
+            <img src="..\imgs\destaques\oferta1.svg" alt="Imagem 1">
+        </div>
+
+        <div class="filters-container">
+            <div class="filter">
+                <h3>Preço</h3>
+                <div class="price-inputs">
+                    <input type="text" id="priceMin" placeholder="De">
+                    <span class="dash">-</span>
+                    <input type="text" id="priceMax" placeholder="Até">
+                </div>
+            </div>
+            <div class="filter">
+                <h3>Tamanho de Roupas</h3>
+                <div class="select-container" id="clothingSizes">
+                    <div class="selected-option" onclick="toggleOptions('clothingSizes')">Selecione os tamanhos</div>
+                    <div class="options">
+                        <label><input type="checkbox" value="PP"> PP</label>
+                        <label><input type="checkbox" value="P"> P</label>
+                        <label><input type="checkbox" value="M"> M</label>
+                        <label><input type="checkbox" value="G"> G</label>
+                        <label><input type="checkbox" value="GG"> GG</label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <h3>Tamanho de Calçados</h3>
+                <div class="select-container" id="shoeSizes">
+                    <div class="selected-option" onclick="toggleOptions('shoeSizes')">Selecione os tamanhos</div>
+                    <div class="options">
+                        <label><input type="checkbox" value="35"> 35</label>
+                        <label><input type="checkbox" value="36"> 36</label>
+                        <label><input type="checkbox" value="37"> 37</label>
+                        <label><input type="checkbox" value="38"> 38</label>
+                        <label><input type="checkbox" value="39"> 39</label>
+                        <label><input type="checkbox" value="40"> 40</label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <h3>Ordenar por</h3>
+                <div class="select-container" id="sortBy">
+                    <div class="selected-option" onclick="toggleOptions('sortBy')">Selecione a ordenação</div>
+                    <div class="options">
+                        <label><input type="radio" name="sorting" value="maior-menor"> Maior para o Menor</label><br>
+                        <label><input type="radio" name="sorting" value="menor-maior"> Menor para o Maior</label><br>
+                        <label><input type="radio" name="sorting" value="mais-vendidos"> Mais Vendidos</label><br>
+                        <label><input type="radio" name="sorting" value="alfabetica-asc"> Nome: a-z</label><br>
+                        <label><input type="radio" name="sorting" value="alfabetica-desc"> Nome: z-a</label><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="produtos"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Panos dos manos</p>
+    </footer>
+
+    <script src="..\js\add_produtos.js"></script>
+    <script>
+        // Chama a função para adicionar produtos ao HTML
+        adicionarProdutosAoHTML_ofertas();
+    </script>
+</body>
+</html>
